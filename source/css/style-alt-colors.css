@@ -13955,6 +13955,7 @@ h3,
 }
 
 @media (min-width: 1600px) {
+  h3,
   .h3-alternate {
     font-size: 42px;
   }
