@@ -9015,6 +9015,26 @@ a[href*='mailto'] {
   z-index: 1;
 }
 
+.index-list > li .list-index-counter2 {
+  position: relative;
+  z-index: 1;
+}
+
+.index-list > li .list-index-counter2:before {
+  z-index: -1;
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 170px;
+  line-height: 130px;
+  font-weight: 900;
+  color: #fff;
+  transform: translateY(-78%);
+}
+
 .index-list > li .list-index-counter:before {
   z-index: -1;
   content: counter(li);
@@ -9043,9 +9063,18 @@ a[href*='mailto'] {
   color: #ffffff;
 }
 
+.bg-gray-lighter .index-list > li .list-index-counter2:before {
+  color: #ffffff;
+}
+
 .bg-gray-darker .index-list > li .list-index-counter:before,
 .bg-additional-gray-darker .bg-additional-item .index-list > li .list-index-counter:before {
   color: #981df0;
+}
+
+.bg-gray-darker .index-list > li .list-index-counter2:before,
+.bg-additional-gray-darker .bg-additional-item .index-list > li .list-index-counter2:before {
+  color: rgb(69, 69, 88);
 }
 
 .bg-gray-darker .index-list-content p,
